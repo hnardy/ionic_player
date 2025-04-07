@@ -1,18 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Player</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding">
 
   <h2>Música: Minha Primeira Música</h2>
-  <h4>Artista: artista 1</h4>
+  <h4>Artista: Nome do Artista</h4>
 
-  <ion-button expand="block">
-   
+  <ion-button expand="block" (click)="togglePlay()">
+    {{ isPlaying ? 'Pausar' : 'Tocar' }}
   </ion-button>
 
-  <audio #audioPlayer src="assets/musicas/musica1.mp3"></audio>
+  <audio #audioPlayer src="assets/musicas/help.mp3"></audio>
 
 </ion-content>

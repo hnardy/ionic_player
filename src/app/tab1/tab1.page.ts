@@ -1,13 +1,25 @@
-import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { IonicModule } from '@ionic/angular'; // 👈 importa o módulo do Ionic
 
 @Component({
   selector: 'app-tab1',
+  standalone: true, // 👈 importante no Angular standalone
+  imports: [IonicModule], // 👈 registra os componentes Ionic aqui
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
 })
 export class Tab1Page {
-  constructor() {}
+  isPlaying = false;
+
+  @ViewChild('audioPlayer', { static: false }) audioPlayer!: ElementRef<HTMLAudioElement>;
+
+  togglePlay() {
+    const audio = this.audioPlayer.nativeElement;
+    if (this.isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    this.isPlaying = !this.isPlaying;
+  }
 }
