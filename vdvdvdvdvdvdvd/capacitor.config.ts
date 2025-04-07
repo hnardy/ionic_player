@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'ionic.player',
-  appName: 'player',
+  appId: 'ionic.vdvdvdvdvdvdvd',
+  appName: 'vdvdvdvdvdvdvd',
   webDir: 'www'
 };
 
