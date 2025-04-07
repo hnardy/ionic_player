@@ -1,18 +1,28 @@
 <ion-content class="ion-padding">
-  <h2>Música: Minha Primeira Músiiiiiiiiiiica</h2>
-  <h4>Artista: Nome do Artista</h4>
+  <!-- Exibição do título e artista -->
+  <h2>{{ currentSong.title }}</h2>
+  <h4>{{ currentArtist }}</h4>
 
-  <ion-button expand="block" (click)="togglePlay()"> 
-    {{ isPlaying ? 'Pausar' : 'Tocar' }}
-  </ion-button>
+  <!-- Botões de controle: Anterior, Tocar/Pausar e Próxima -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="prevSong()">Anterior</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" (click)="togglePlay()">
+          {{ isPlaying ? 'Pausar' : 'Tocar' }}
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" (click)="nextSong()">Próxima</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <!-- Elemento de áudio (a fonte será atualizada via TS) -->
   <audio #audioPlayer id="audioPlayer">
-    <source src="https://dn720308.ca.archive.org/0/items/hentai-jazz-deluxe-wkvdjb/Mabisyo%20-%20Hentai%20Jazz%20Deluxe%20-%2001%20The%20Sweetest%20Taste%20In%20The%20World.flac" type="audio/mp3" />
     Seu navegador não suporta áudio.
   </audio>
 </ion-content>
 
-<audio autoplay="autoplay" controls="controls">
-  <source src="https://dn720308.ca.archive.org/0/items/hentai-jazz-deluxe-wkvdjb/Mabisyo%20-%20Hentai%20Jazz%20Deluxe%20-%2001%20The%20Sweetest%20Taste%20In%20The%20World.flac" type="audio/mp3" />
-  seu navegador não suporta HTML5
-  </audio>
