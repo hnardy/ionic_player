@@ -1,0 +1,7 @@
+{
+  "name": "projetop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

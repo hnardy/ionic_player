@@ -1,0 +1,12 @@
+<ion-content class="ion-padding">
+
+  <h2>Música: Minha Primeira Música</h2>
+  <h4>Artista: Nome do Artista</h4>
+
+  <ion-button expand="block" (click)="togglePlay()">
+    {{ isPlaying ? 'Pausar' : 'Tocar' }}
+  </ion-button>
+
+  <audio #audioPlayer src="assets/musicas/trovoes.mp3"></audio>
+
+</ion-content>
