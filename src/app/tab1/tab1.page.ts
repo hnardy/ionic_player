@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular'; // 👈 importa o módulo do Ionic
 
 @Component({
   selector: 'app-tab1',
@@ -9,12 +9,12 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
-  @ViewChild('audioPlayer', { static: false }) audioPlayer!: ElementRef<HTMLAudioElement>;
   isPlaying = false;
+
+  @ViewChild('audioPlayer', { static: false }) audioPlayer!: ElementRef<HTMLAudioElement>;
 
   togglePlay() {
     const audio = this.audioPlayer.nativeElement;
-
     if (this.isPlaying) {
       audio.pause();
     } else {

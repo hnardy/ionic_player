@@ -1,18 +1,12 @@
 <ion-content class="ion-padding">
-  <h2>Música: Minha Primeira Músiiiiiiiiiiica</h2>
+
+  <h2>Música: Minha Primeira Música</h2>
   <h4>Artista: Nome do Artista</h4>
 
-  <ion-button expand="block" (click)="togglePlay()"> 
+  <ion-button expand="block" (click)="togglePlay()">
     {{ isPlaying ? 'Pausar' : 'Tocar' }}
   </ion-button>
 
-  <audio #audioPlayer id="audioPlayer">
-    <source src="https://dn720308.ca.archive.org/0/items/hentai-jazz-deluxe-wkvdjb/Mabisyo%20-%20Hentai%20Jazz%20Deluxe%20-%2001%20The%20Sweetest%20Taste%20In%20The%20World.flac" type="audio/mp3" />
-    Seu navegador não suporta áudio.
-  </audio>
-</ion-content>
+  <audio #audioPlayer src="assets/musicas/trovoes.mp3"></audio>
 
-<audio autoplay="autoplay" controls="controls">
-  <source src="https://dn720308.ca.archive.org/0/items/hentai-jazz-deluxe-wkvdjb/Mabisyo%20-%20Hentai%20Jazz%20Deluxe%20-%2001%20The%20Sweetest%20Taste%20In%20The%20World.flac" type="audio/mp3" />
-  seu navegador não suporta HTML5
-  </audio>
+</ion-content>
